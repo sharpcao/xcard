@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>hello getPHP</title>	
+</head>
+<body>
+	<div id='app'>
+	<input type='button' :value='message' @click='button1_click'>
+	<input type='button' :value='message' @click='button2_click'>
+	<input type='text' :value='name'>{{name}}
+	</div>
+
+	<script type="module">
+		import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+		createApp({
+			data() {
+				return {
+					message: 'Hello Vue!',
+					name:"test"
+				}
+			},
+			methods:{
+				button1_click,
+				button2_click
+				
+			}
+		}).mount('#app')
+	</script>
+
+	<script>
+		function button1_click(e){
+					console.log('ok')
+					fetch('http://localhost/webapp/php/getdata.php?id=1').then( x=>{
+						return x.json()
+					}).then( x=>{
+						console.log(x)
+						this.name = x.name
+						console.log(this.name)
+
+					})
+		}
+		function button2_click(e){
+					console.log('ok')
+					fetch('http://localhost/webapp/php/getdata.php?id=1').then( x=>{
+						return x.json()
+					}).then( x=>{
+						console.log(x)
+						this.name = x.email
+						console.log(this.name)
+
+					})
+		}
+		
+	</script>
+
+
+
+
+</body>
+</html>
