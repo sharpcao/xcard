@@ -1,14 +1,5 @@
-<?php
-
-// 设置响应头，指定返回的数据格式为 JSON
-header('Content-Type: application/json');
-
-// 获取请求参数
-$id = $_GET['id'];
-
-
-$data = [
-    "cardId"=> $id,
+{
+    "cardId"=> 234,
     "name"=> "张三",
     "title"=> "总经理",
     "company"=> "杭州XX有限公司",
@@ -17,26 +8,25 @@ $data = [
     "weixin"=> "wx3322",
     "head"=> "head.png",
     "background"=> "background.png",
-    "newsList" =>
+    "newsList"=>
     [
-        [
+        {
             "newsId"=> 1,
             "newsTitle"=> "新闻1",
-            "newsPicture"=> "news1.png"
-        ],
-        [
+            "newsPicture"=> "news1.png",
+            "cardId"=> 234
+        },
+        {
             "newsId"=> 2,
             "newsTitle"=> "新闻2",
-            "newsPicture"=> "news2.png"
-        ],
-        [
+            "newsPicture"=> "news2.png",
+            "cardId"=> 234
+        },
+        {
             "newsId"=> 3,
             "newsTitle"=> "新闻3",
-            "newsPicture"=> "news3.png"
-        ]
+            "newsPicture"=> "news3.png",
+            "cardId"=> 234
+        }
     ]
-];
-
-// 将数据转换为 JSON 格式并返回
-echo json_encode($data);
-?>
+}
