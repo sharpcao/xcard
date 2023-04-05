@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-size: 13px;
+    }
+
+    .box {
+/*        border: 1px solid red;*/
+        box-sizing: border-box;
+    }
+
+    #app {
+        margin: 0px auto;
+        width: 375px;
+        height: 800px;
+    }
+
+    #background {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(242, 242, 242);
+
+    }
+
+    #background_top {
+        width: 100%;
+        height: 155px;
+        background-color: #aaa;
+    }
+
+    #front {
+        position: absolute;
+        top: 0px;
+        margin: 0px auto;
+        width: 375px;
+        /* height: 800px; */
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 0px 15px;
+    }
+
+    #card {
+        margin-top: 70px;
+        width: 100%;
+        height: 150px;
+        border-radius: 7px;
+        /* background-color: #d7d7d7; */
+        position: relative;
+        background: url("card_background.webp") no-repeat;
+        background-size: 100% 100%;
+    }
+
+
+    #news_list {
+        width: 100%;
+        /* height: 500px; */
+        margin-top: 20px;
+    }
+
+    #head {
+        left: 25px;
+        top: 18px;
+        width: 60px;
+        height: 57px;
+        position: absolute;
+        border-radius: 50%;
+
+    }
+
+    #btn_openwx {
+        left: 176px;
+        top: 100px;
+        width: 148px;
+        height: 40px;
+        position: absolute;
+    }
+
+    #btn_save {
+        left: 17px;
+        top: 100px;
+        width: 148px;
+        height: 40px;
+        position: absolute;
+    }
+
+    #name {
+        left: 105px;
+        top: 18px;
+        position: absolute;
+
+    }
+
+    #title {
+        left: 250px;
+        top: 18px;
+
+        position: absolute;
+    }
+
+    #address {
+        left: 105px;
+        top: 59px;
+        position: absolute;
+    }
+
+    .news {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+    }
+
+    .news_face {
+        height: 135px;
+        width: 100%;
+    }
+    .news_face img{
+    	width: 100%;
+    	height: 100%;
+    }
+    .news_title {
+        width: 100%;
+        height: calc(100% - 135px);
+        padding: 8px;
+        background-color: #fff;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="background">
+            <div id="background_top">
+            </div>
+            <div id="background_main">
+            </div>
+        </div>
+        <div id="front">
+            <section id="card" class="box">
+                <img src="face.webp" alt="" id="head">
+                <span id="name">张三</span>
+                <span id="title">总经理</span>
+                <span id="address">杭州滨江XX有限公司</span>
+                <button id="btn_save">保存名片</button>
+                <button id="btn_openwx">打开微信</button>
+            </section>
+            <section id="news_list" class="box">
+                <article class="news box">
+                    <div class="news_face box">
+                    	<img src="news1.jpg" alt="">
+                    </div>
+                    <div class="news_title box">
+                        产品介绍产品介绍产品介绍
+                    </div>
+                </article>
+                <article class="news box">
+                    <div class="news_face box">
+                    	<img src="news2.webp" alt="">
+                    </div>
+                    <div class="news_title box">
+                        产品介绍产品介绍产品介绍
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

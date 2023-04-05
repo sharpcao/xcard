@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #app {
+            width: 350px;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        #card {
+            height: 150px;
+            width: 100%;
+            margin-top: 70px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+        #card_top {
+            height: 100px;
+            display: flex;
+        }
+
+        #card_button {
+            height: calc(100% - 100px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card_button {
+            width: 150px;
+            height: 35px;
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #head_div {
+            width: 120px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #info_div {
+            width: calc(100% - 120px);
+            height: 100%;
+
+        }
+
+        #face_img {
+            width: 80%;
+            height: 80%;
+        }
+
+        #info_div ul {
+            position: relative;
+            top: 10px;
+        }
+
+        #info_div ul li {
+            margin: 5px 0px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #news_list {
+            margin-top: 10px;
+            /* position: relative; */
+        }
+
+        article {
+            height: 180px;
+            background-color: #ccc;
+        }
+
+        .article_image {
+            height: 130px;
+            background-color: #aaa;
+        }
+
+        .article_title {
+            height: calc(100% - 130px);
+            background-color: #ccc;
+
+        }
+
+        .article_title h2 {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main id='app'>
+        <section id='card'>
+            <section id='card_top'>
+                <div id='head_div'>
+                    <img src="face.webp" alt="" id='face_img'>
+                </div>
+                <div id='info_div'>
+                    <ul>
+                        <li>张三三</li>
+                        <li>浙江商务有限公司</li>
+                    </ul>
+
+                </div>
+            </section>
+            <section id='card_button'>
+                <button class='card_button'>保存名片</button>
+                <button class='card_button'>打开微信</button>
+            </section>
+
+        </section>
+
+        <section id='news_list'>
+            <article>
+                <div class="article_image"></div>
+                <div class="article_title">
+                    <h2>新闻标题新闻标题新闻标题</h2>
+                </div>
+
+            </article>
+
+        </section>
+    </main>
+
+</body>
+
+</html>

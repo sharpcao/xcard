@@ -1,81 +1,184 @@
 <html>
+
 <head>
-	<meta http-equiv="Content-Type"content="text/html; charset=utf-8"> 
-<style>
-	
-	* {
-		padding:0px;
-		margin:0px;
-		font-size:12px;
-	}
-	.ctldiv{
-		position: absolute;
-	}
-	.ctldiv >:first-child {
-		width:100%;
-		height: 100%;
-	}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			font-size: 12px;
+		}
 
-</style>	
+		.ctldiv {
+			position: absolute;
+		}
+
+		.ctldiv>:first-child {
+			width: 100%;
+			height: 100%;
+		}
+
+		.ctldiv.news_picture {
+			left: 15px;
+			top: 240px;
+			width: 344px;
+			height: 134px;
+		}
+
+		.ctldiv.news_title {
+			left: 15px;
+			top: 374px;
+			width: 344px;
+			height: 46px;
+		}
+
+		.ctldiv.card_box {
+			left: 15px;
+			top: 70px;
+			width: 340px;
+			height: 150px;
+			background-color: rgb(215, 215, 215);
+			display: flex;
+		}
+
+		.ctldiv.name {
+			left: 120px;
+			top: 88px;
+			width: 28px;
+			height: 16px;
+		}
+
+		.ctldiv.address {
+			left: 120px;
+			top: 129px;
+			width: 103px;
+			height: 16px;
+		}
+
+		.ctldiv.head {
+			left: 40px;
+			top: 88px;
+			width: 60px;
+			height: 57px;
+		}
+
+		.ctldiv.btn_openwx {
+			left: 191px;
+			top: 170px;
+			width: 148px;
+			height: 40px;
+		}
+
+		.ctldiv.btn_save {
+			left: 32px;
+			top: 170px;
+			width: 148px;
+			height: 40px;
+		}
+
+		.ctldiv.btn_addnews {
+			left: 319px;
+			top: 590px;
+			width: 40px;
+			height: 40px;
+		}
+	</style>
 </head>
+
 <body>
-<div id='app' >
-<div class = "ctlDiv" style = "left:15px;top:374px;width:344px;height:46px"> <div id = 'news_background' style="background-color:rgb(255, 255, 255);display:flex"><div style="width:100%;align-self:center;text-align:center;">产品介绍产品介绍产品介绍产品介绍产品介绍</div></div> </div> 
-<div class = "ctlDiv" style = "left:15px;top:240px;width:344px;height:134px"> <div id = 'news_picture' style="background-color:rgb(215, 215, 215);display:flex"><div style="width:100%;align-self:center;text-align:center;">图</div></div> </div> 
-<div class = "ctlDiv" style = "left:15px;top:70px;width:340px;height:150px"> <div id = 'card_box' style="background-color:rgb(215, 215, 215);display:flex"><div style="width:100%;align-self:center;text-align:center;"></div></div> </div> 
-<div class = "ctlDiv" style = "left:120px;top:88px;width:28px;height:16px"> <label id = 'name' > {{name}}</label> </div> 
-<div class = "ctlDiv" style = "left:120px;top:129px;width:103px;height:16px"> <label id = 'address' > {{address}}</label> </div> 
-
-<div class = "ctlDiv" style = "left:191px;top:170px;width:148px;height:40px"> <button id = 'btn_openwx' > 打开微信</button> </div> 
-<div class = "ctlDiv" style = "left:32px;top:170px;width:148px;height:40px"> <button id = 'btn_save' > 保存名片</button> </div> 
-<div class = "ctlDiv" style = "left:319px;top:590px;width:40px;height:40px"> <button id = 'btn_addnews'> +</button> </div> 
-
-<div class = "ctlDiv" style = "left:40px;top:88px;width:60px;height:57px"> <div id = 'head' style="background-color:rgb(170, 170, 170);display:flex"><div style="width:100%;align-self:center;text-align:center;">head</div></div> </div>
-
-<ol>
-    <li v-for="item in newsList">
-      {{ item.newsTitle }}
-    </li>
-</ol>
-
-</div>
+	<div id='app'>
+		<div class="ctlDiv card_box">
+	
+		</div>
 
 
 
-<script type="module">
+
+		<div class="ctlDiv head">
+			<div id='head' style="background-color:rgb(170, 170, 170);display:flex">
+				<div style="width:100%;align-self:center;text-align:center;">head</div>
+			</div>
+		</div>
+
+		<div class="ctlDiv name">
+			<label id='name'> {{name}}</label>
+		</div>
+		<div class="ctlDiv address">
+			<label id='address'>{{address}}</label>
+		</div>
+
+		<div class="ctlDiv btn_openwx">
+			<button id='btn_openwx'> 打开微信</button>
+		</div>
+		<div class="ctlDiv btn_save">
+			<button id='btn_save'>保存名片</button>
+		</div>
+
+		<div class="ctlDiv news_picture">
+			<div id='news_picture' style="background-color:rgb(215, 215, 215);display:flex">
+				<div style="width:100%;align-self:center;text-align:center;">图</div>
+			</div>
+		</div>
+		<div class="ctlDiv news_title">
+			<div id='news_title' style="background-color:rgb(255, 255, 255);display:flex">
+				<div style="width:100%;align-self:center;text-align:center;">产品介绍产品介绍产品介绍产品介绍产品介绍</div>
+			</div>
+		</div>
+
+		<div class="ctlDiv btn_addnews">
+			<button id='btn_addnews'> +</button>
+		</div>
+
+
+
+
+
+
+		<ol>
+			<li v-for="item in newsList">
+				{{ item.newsTitle }}
+			</li>
+		</ol>
+
+	</div>
+
+
+
+	<script type="module">
 		import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
 		createApp({
 			data() {
 				return {
 					address: '111',
-					name:"111",
-					newsList:[]
+					name: "111",
+					newsList: []
 				}
 			},
-			methods:{
+			methods: {
 				init_form
 			},
-			created(){
+			created() {
 				this.init_form()
-	
+
 			}
 		}).mount('#app')
-</script>
+	</script>
 
-<script>
-function init_form(){
-	fetch('http://localhost/webapp/xcard/getdata.php?id=1').then( x=>{
-		return x.json()
-	}).then( x=>{
-		console.log(x)
-		this.name = x.name
-		this.address = x.address
-		this.newsList= x.newsList
+	<script>
+		function init_form() {
+			fetch('http://localhost/webapp/xcard/getdata.php?id=1').then(x => {
+				return x.json()
+			}).then(x => {
+				console.log(x)
+				this.name = x.name
+				this.address = x.address
+				this.newsList = x.newsList
 
-	})
-}
-</script>
+			})
+		}
+	</script>
 
 </body>
+
 </html>
